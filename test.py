@@ -4,9 +4,16 @@ FastMCP quickstart example.
 Run from the repository root:
     uv run examples/snippets/servers/fastmcp_quickstart.py
 """
+
+import sys
+import os
+
+
+# 后续导入语句不变（此时就能正常找到 MCP-tool 包了）
 from mcp.server.fastmcp import FastMCP
-# 从 MCP-tool 目录导入 dir_scan 中的注册函数（调整导入路径）
-from MCP_tool.dir_scan import register_dir_scan_tool
+# 注意：目录名是 MCP-tool，导入时可以直接用连字符，也可以用下划线，两种都支持
+from MCPServer.dir_scan import register_dir_scan_tool
+
 
 # Create an MCP server
 mcp = FastMCP("Demo", json_response=True)
