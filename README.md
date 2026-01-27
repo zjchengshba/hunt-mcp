@@ -1,0 +1,2 @@
+# hunt-mcp
+AI-RedTeam
